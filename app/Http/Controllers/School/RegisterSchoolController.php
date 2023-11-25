@@ -17,8 +17,8 @@ class RegisterSchoolController extends Controller
 
     public function store(Request $request)
     {
-       $data = $request->all();
-       $user = User::create([
+        $data = $request->all();
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => $data['password'],
@@ -31,7 +31,53 @@ class RegisterSchoolController extends Controller
 
     public function index()
     {
-        $name = Auth::user()->name;
-        return view('admin.layouts.main', compact('name'));
+
+        return view('admin.layouts.main');
+    }
+
+    public function show()
+    {
+        return view('admin.calendar.calendar');
+    }
+
+    public function showTeachers()
+    {
+        return view('admin.teachers.teachers');
+
+    }
+
+    public function showStudents()
+    {
+        return view('admin.students.students');
+    }
+
+    public function addStudents()
+    {
+        return view('admin.students.addstudent');
+    }
+
+    public function showNews()
+    {
+        return view('admin.news.news');
+    }
+
+    public function addLesson()
+    {
+        return view('admin.news.news');
+    }
+
+    public function showJornal()
+    {
+        return view('admin.jornal.jornal');
+    }
+
+    public function addLessons()
+    {
+        return view('admin.jornal.addLesson');
+    }
+
+    public function addTeacher()
+    {
+        return view('admin.teachers.addteacher');
     }
 }

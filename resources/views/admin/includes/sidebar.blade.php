@@ -5,49 +5,58 @@
                 <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block"> {{ $name }}</a>
+                <a href="#" class="d-block"> Администратор
+                </a>
             </div>
         </div>
         <div class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-header">{{__('Каталог')}}</li>
                 <li class="nav-item">
-                    <a href="{{ route('admin') }}" class="nav-link">
+                    <a href="{{ route('school.show') }}" class="nav-link">
                         <i class="nav-icon fa fa-table"></i>
                         <p>
-                            {{__('Главная таблица')}}
+                            {{__('Рабочие задачи')}}
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.users') }}" class="nav-link">
+                    <a href="{{ route('school.show.jornal') }}" class="nav-link">
+                        <i class="nav-icon fa fa-table"></i>
+                        <p>
+                            {{__('Рассписание уроков')}}
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('school.show.teachers') }}" class="nav-link">
                         <i class="nav-icon fa fa-users"></i>
                         <p>
-                            {{__('Пользователи')}}
+                            {{__('Преподаватели')}}
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.categories') }}" class="nav-link">
+                    <a href="{{ route('school.show.students') }}" class="nav-link">
                         <i class="nav-icon fa fa-list" aria-hidden="true"></i>
                         <p>
-                            {{__('Категории')}}
+                            {{__('Ученики')}}
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.tags') }}" class="nav-link">
+                    <a href="{{ route('school.show.news') }}" class="nav-link">
                         <i class="nav-icon fa fa-tags"></i>
                         <p>
-                            {{__('Тэги')}}
+                            {{__('Новости')}}
                         </p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('admin.posts') }}" class="nav-link">
+                    <a href="" class="nav-link">
                         <i class="nav-icon fa fa-comments"></i>
                         <p>
-                            {{__('Посты')}}
+                            {{__('Настройки')}}
                         </p>
                     </a>
                 </li>
