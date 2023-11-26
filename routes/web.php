@@ -39,6 +39,7 @@ Route::group(['namespace' => 'App\Http\Controllers\School'], function () {
     Route::get('/school/admin/add/student', [RegisterSchoolController::class, 'addStudents'])->name('school.add.student');
     Route::get('/school/admin/add/teacher', [RegisterSchoolController::class, 'addTeacher'])->name('school.add.teacher');
     Route::post('/school/admin/add/teacher', [RegisterSchoolController::class, 'storeTeacher'])->name('school.store.teacher');
+    Route::get('/school/admin/list', [RegisterSchoolController::class, 'showStudentsList'])->name('school.students.list');
 
 
 });
@@ -55,10 +56,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Teacher'], function () {
     Route::get('/teacher/admin/add', [RegisterTeacherController::class, 'add'])->name('teacher.add.student');
     Route::get('/teacher/admin/news', [RegisterTeacherController::class, 'showNews'])->name('teacher.show.news');
     Route::get('/teacher/admin/massage', [RegisterTeacherController::class, 'createMsg'])->name('teacher.create.message');
-
-
-
-
+    Route::get('/teacher/admin/addNews', [RegisterTeacherController::class, 'createNews'])->name('teacher.create.news');
 });
 
 

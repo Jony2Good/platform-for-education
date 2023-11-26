@@ -2,11 +2,11 @@
 @section('content')
 <div class="container p-0">
     <div class="row">
-        <main class="col-sm-10 col-md-9 ms-sm-auto col-lg-10 col-xl-9 p-0">
+        <main class="col-sm-10 col-md-9 col-lg-10 col-xl-9 p-0">
             <div class="news content bg-light m-xs-0 m-sm-0 p-5 my-xl-4 rounded-3">
                 <h2 class="fw-bold mb-4">Новости</h2>
                 <div class="news-actions d-flex align-items-center justify-content-between">
-                    <a href="#" class="btn btn-primary">Предложить новость</a>
+                    <a href="{{ route('teacher.create.news') }}" class="btn btn-primary">Предложить новость</a>
                     <div class="news-search position-relative">
                         <input type="text" placeholder="Поиск">
                         <button class="filter-btn position-absolute">

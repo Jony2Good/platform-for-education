@@ -26,6 +26,7 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
     <link rel="stylesheet" href="{{asset('plugins/fullcalendar/main.css')}}">
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <style>
         .custom-file-input:lang(en) ~ .custom-file-label::after {
             display: none;
