@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\School;
 
 use App\Http\Controllers\Controller;
+use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\School\StoreRequest;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterSchoolController extends Controller
 {
@@ -40,8 +42,8 @@ class RegisterSchoolController extends Controller
         return view('admin.calendar.calendar');
     }
 
-    public function showTeachers()
-    {
+    public function showTeachers()    {
+
         return view('admin.teachers.teachers');
 
     }
@@ -61,7 +63,12 @@ class RegisterSchoolController extends Controller
         return view('admin.news.news');
     }
 
-    public function addLesson()
+    public function addNews()
+    {
+        return view('admin.news.add');
+    }
+
+        public function addLesson()
     {
         return view('admin.news.news');
     }
@@ -79,5 +86,23 @@ class RegisterSchoolController extends Controller
     public function addTeacher()
     {
         return view('admin.teachers.addteacher');
+    }
+
+    public function storeTeacher(Request $request)
+    {
+       $data = $request->all();
+       $image = $data['main_image'];
+       $path = Storage::put('/images', $image);
+
+
+        $user = Teacher::create([
+            'name' => $data['name'],
+            'first_name' => $data['first_name'],
+            'email' => $data['email'],
+            'role' => $data['role'],
+            'image' => $path,
+        ]);
+
+        return redirect()->route('school.show.teachers');
     }
 }

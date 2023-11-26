@@ -4,6 +4,11 @@
     max-height: 50px;
 }
 
+.num {
+    width: 20px;
+    height: 20px;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7953,6 +7958,21 @@ button {
     background: inherit;
     border: none;
 }
+img {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+.btn-purple {
+    background-color: #5247CC;
+    color: #fff;
+}
+.text-purple {
+    color: #5247CC;
+}
+.text-cancel {
+    background: linear-gradient(0deg, rgba(228, 0, 0, 0.05) 0%, rgba(228, 0, 0, 0.05) 100%), #FFF;
+}
 .window {
     height: 100vh;
 }
@@ -7969,7 +7989,6 @@ button {
     position: relative;
 }
 .schedule .table {
-    display: inline-block;
     vertical-align: top;
     max-width: 100%;
     overflow-x: auto;
@@ -7977,6 +7996,15 @@ button {
     -webkit-overflow-scrolling: touch;
     scrollbar-color: #D9D9D9;
     scrollbar-width: thin;
+}
+.schedule .schedule-option {
+    box-shadow: 0px 4px 15px 0px #DFE5F2;
+    bottom: -17px;
+    right: -40px;
+    display: none;
+}
+.schedule .schedule-option-active {
+    display: initial;
 }
 /*.schedule .table::-webkit-scrollbar {*/
 /*    width: 10px;*/
@@ -8127,6 +8155,7 @@ button {
 .select__arrow {
     position: absolute;
     right: 8px;
+    top: 8px;
 }
 .select__title:hover {
     border-color: #2F80ED;
@@ -8199,4 +8228,33 @@ button {
         width: 100%;
         height: 200px;
     }
+}
+.chat .search input {
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    width: 305px;
+    padding: 7px;
+}
+.chat .search .search-btn {
+    top: 5px;
+    right: 40px;
+}
+.slider-news .swiper-slide {
+    border-radius: 12px;
+}
+.slider-news .swiper-slide img {
+    height: 216px;
+    border-radius: 15px;
+}
+.slider-news .swiper-slide .image .option{
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+}
+.slider-news .swiper-button-prev {
+    color: #5247CC;
+}
+.slider-news .swiper-button-next {
+    color: #5247CC;
 }

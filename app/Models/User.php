@@ -20,7 +20,7 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return [
             Role::Admin->value => Role::Admin->getRoleName(),
-            Role::Visitor->value => Role::Visitor->getRoleName(),
+            Role::Teacher->value => Role::Teacher->getRoleName(),
         ];
     }
     /**
