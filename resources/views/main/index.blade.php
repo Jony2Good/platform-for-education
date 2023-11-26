@@ -3,13 +3,20 @@
 @section('content')
     <main class="main">
         <section class="vh-100">
-            <div class="container-fluid h-custom">
-                <div class="row d-flex justify-content-center align-items-center h-100">
-                    <div class="col-md-9 col-lg-6 col-xl-5">
-                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-                             class="img-fluid" alt="Sample image">
-                    </div>
-                </div>
+            <div class="collapse navbar-collapse" id="edicaMainNav">
+                <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('school') }}">{{ __('Админ') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('teacher') }}"
+                           aria-haspopup="true" aria-expanded="false">{{ __('Преподаватель') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('parent') }}"
+                           aria-haspopup="true" aria-expanded="false">{{ __('Родитель') }}</a>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>

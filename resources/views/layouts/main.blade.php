@@ -13,6 +13,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Styles -->
+    <link rel="stylesheet" href="{{asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendors/flag-icon-css/css/flag-icon.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/vendors/font-awesome/css/all.min.css')}} ">
     <link rel="stylesheet" href="{{asset('assets/vendors/aos/aos.css')}}">
@@ -21,21 +22,19 @@
     <script src="{{asset('assets/vendors/jquery/jquery.min.js')}}"></script>
     <script src="{{asset('assets/js/loader.js')}}"></script>
 </head>
-<body>
-<div class="edica-loader"></div>
-<header class="edica-header">
-    @include('includes.header')
-</header>
-
-@yield('content')
-
-<section class="edica-footer-banner-section">
-    @include('includes.footer-banner')
-</section>
-
-<footer class="edica-footer" data-aos="fade-up">
-    @include('includes.footer')
-</footer>
+<body class="container m-auto pt-5 vh-100">
+<div class="d-flex flex-column align-items-center justify-content-center rounded">
+    <h1 class="mb-3">Вход в систему</h1>
+    <ul class="list-group w-25">
+        <li class="list-group-item mb-3 text-center">
+            <a class="nav-link" href="{{ route('school') }}">{{ __('Админ') }}</a></li>
+        <li class="list-group-item mb-3 text-center">
+            <a class="nav-link" href="{{ route('parent') }}"
+               aria-haspopup="true" aria-expanded="false">{{ __('Родитель') }}</a></li>
+        <li class="list-group-item text-center"><a class="nav-link" href="{{ route('teacher') }}">{{ __('Преподаватель') }}</a>
+        </li>
+    </ul>
+</div>
 <!-- Scripts -->
 <script src="{{asset('assets/vendors/popper.js/popper.min.js')}}"></script>
 <script src="{{asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
