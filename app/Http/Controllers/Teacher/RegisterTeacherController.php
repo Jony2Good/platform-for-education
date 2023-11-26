@@ -78,4 +78,9 @@ class RegisterTeacherController extends Controller
     {
         return view('teacher.admin.message');
     }
+
+    public function createNews()
+    {
+        return view('teacher.news.addNews');
+    }
 }

@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="{{asset('plugins/daterangepicker/daterangepicker.css')}}">
     <!-- Select2 -->
     <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
+    <link rel="stylesheet" href="{{asset('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css')}}">
+    <script src="{{asset('https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js')}}"></script>
+
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <style>
         .custom-file-input:lang(en) ~ .custom-file-label::after {
             display: none;
@@ -61,10 +65,6 @@
 
     @include('teacher.includes.sidebar')
     @yield('content')
-    <footer class="main-footer">
-        <strong>Education platform.2023</strong>
-        All rights reserved.
-    </footer>
      <aside class="control-sidebar control-sidebar-dark">
        </aside>
 </div>
@@ -77,7 +77,7 @@
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>
-
+{{--<script src="{{asset('assets/js/main.js')}}"></script>--}}
 <script src="{{asset('plugins/moment/moment.min.js')}}"></script>
 <script src="{{asset('plugins/daterangepicker/daterangepicker.js')}}"></script>
 <!-- overlayScrollbars -->
@@ -91,9 +91,11 @@
 <!-- Select2 -->
 <script src="{{asset('plugins/select2/js/select2.full.min.js')}}"></script>
 <script src="{{asset('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js')}}"></script>
-<script src="{{asset('plugins/flot/jquery.flot.js')}}"></script>
+
 <script src="{{asset('plugins/flot/plugins/jquery.flot.resize.js')}}"></script>
 <script src="{{asset('plugins/flot/plugins/jquery.flot.pie.js')}}"></script>
+<script src="{{asset('plugins/flot/jquery.flot.js')}}"></script>
+
 <script>
     $('#summernote').summernote({
         placeholder: 'О чем вы хотели рассказать?',
@@ -414,5 +416,6 @@
             + Math.round(series.percent) + '%</div>'
     }
 </script>
+
 </body>
 </html>

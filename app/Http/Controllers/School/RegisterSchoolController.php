@@ -34,7 +34,7 @@ class RegisterSchoolController extends Controller
     public function index()
     {
 
-        return view('admin.layouts.main');
+        return view('admin.main.index');
     }
 
     public function show()
@@ -42,7 +42,8 @@ class RegisterSchoolController extends Controller
         return view('admin.calendar.calendar');
     }
 
-    public function showTeachers()    {
+    public function showTeachers()
+    {
 
         return view('admin.teachers.teachers');
 
@@ -68,7 +69,7 @@ class RegisterSchoolController extends Controller
         return view('admin.news.add');
     }
 
-        public function addLesson()
+    public function addLesson()
     {
         return view('admin.news.news');
     }
@@ -90,9 +91,9 @@ class RegisterSchoolController extends Controller
 
     public function storeTeacher(Request $request)
     {
-       $data = $request->all();
-       $image = $data['main_image'];
-       $path = Storage::put('/images', $image);
+        $data = $request->all();
+        $image = $data['main_image'];
+        $path = Storage::put('/images', $image);
 
 
         $user = Teacher::create([
@@ -104,5 +105,10 @@ class RegisterSchoolController extends Controller
         ]);
 
         return redirect()->route('school.show.teachers');
+    }
+
+    public function showStudentsList()
+    {
+        return view('admin.students.list');
     }
 }
